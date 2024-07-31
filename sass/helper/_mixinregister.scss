@@ -1,0 +1,30 @@
+@mixin styleButtonRegister(
+  $bgcolor,
+  $padding,
+  $color,
+  $width,
+  $height,
+  $boxShadow: none
+) {
+  background-color: $bgcolor;
+  padding: $padding;
+  border: 2px solid;
+  border-radius: 8px;
+  color: $color;
+  width: $width;
+  height: $height;
+  box-shadow: $boxShadow;
+  transition: all 0.5s;
+  &:hover {
+    background-color: $color;
+    color: $bgcolor;
+    cursor: pointer;
+  }
+}
+@mixin styleAHover($color) {
+  &:hover {
+    // background-color: $color;
+    color: $color;
+    cursor: pointer;
+  }
+}

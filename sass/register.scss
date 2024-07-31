@@ -1,0 +1,236 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Poppins, sans-serif;
+}
+.body {
+  background-color: #c9d6ff;
+  background: (linear-gradient(to right, #e2e2e2));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+.containerLayout {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 550px;
+}
+.containerLayout p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+.containerLayout span {
+  font-size: 12px;
+}
+.containerLayout a {
+  color: #333;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+.containerLayout button {
+  background-color: #512da8;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.containerLayout button.hiddenBtn {
+  background-color: transparent;
+  border-color: #fff;
+  //   cursor: pointer;
+}
+.containerLayout form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+.containerLayout input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none !important;
+}
+
+.formContainer {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  transition: all 0.6s ease-in-out;
+}
+
+.signIn {
+  left: 0;
+  width: 50%;
+  z-index: 2;
+}
+.containerLayout.active .signIn {
+  transform: translateX(100%);
+}
+
+.signUp {
+  left: 0;
+  width: 50%;
+  opacity: 0;
+  z-index: 1;
+}
+.containerLayout.active .signUp {
+  transform: translateX(100%);
+  opacity: 1;
+  z-index: 5;
+  animation: move 0.6s;
+}
+@keyframes move {
+  0%,
+  49.99% {
+    opacity: 0;
+    z-index: 1;
+  }
+  50%,
+  100% {
+    opacity: 1;
+    z-index: 5;
+  }
+}
+
+.formIcon {
+  margin: 20px 0;
+}
+.formIcon a {
+  border: 1px solid #ccc;
+  border-radius: 20%;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 3px;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+.toggleContainer {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  transition: all 0.6s ease-in-out;
+  border-radius: 50px 0 0 50px;
+  z-index: 1000;
+}
+.containerLayout.active .toggleContainer {
+  transform: translateX(-100%);
+  border-radius: 0 50px 50px 0;
+}
+.toggle {
+  background-color: #512da8;
+  height: 100%;
+  background-color: linear-gradient(to right, #5c6bc0, #512da8);
+  color: #fff;
+  position: relative;
+  left: -100%;
+  height: 100%;
+  width: 200%;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+
+.containerLayout.active .toggle {
+  transform: translateX(50%);
+}
+.togglePannel {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+  flex-direction: column;
+  padding: 0 30px;
+  text-align: center;
+  top: 0;
+  transform: translateX(0);
+  transition: all 0.6s ease-in-out;
+}
+.toggleLeft {
+  transform: translateX(-200%);
+}
+.containerLayout.active .toggleLeft {
+  transform: translateX(0);
+}
+.toggleRight {
+  right: 0;
+  transform: translateX(0);
+}
+.containerLayout.active .toggleRight {
+  transform: translateX(200%);
+}
+
+.footer {
+  margin-top: 50px;
+  border-top: 1px solid #fafafa;
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    justify-content: center;
+    margin: 10px 30px 0px 30px;
+    .footer-item {
+      margin-bottom: 10px;
+      .footer-title {
+        margin-bottom: 10px;
+        font-size: 22px;
+        font-weight: bold;
+      }
+      .footer-content {
+        p {
+          font-size: 16px;
+          margin-bottom: unset;
+        }
+        a {
+          text-decoration: none;
+          color: red;
+        }
+      }
+    }
+  }
+}
+
+#formSignUp {
+  .gender {
+    ul {
+      display: flex;
+      gap: 20px;
+      li {
+      }
+    }
+  }
+}

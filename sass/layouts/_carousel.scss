@@ -1,0 +1,156 @@
+.carousel {
+    .container {
+        .carousel_item {
+            h5 {
+                font-size: $fs_title;
+                font-weight: $fw_300;
+                max-width: 400px;
+            }
+            p {
+                font-size: $fs_text_1;
+                font-weight: $fw_300;
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                max-width: 200px;
+            }
+        }
+        .carousel_container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .carousel-indicators [data-bs-target] {
+            height: 20px !important;
+            width: 20px !important;
+            border-radius: 50%;
+            background-color: $color_grey;
+        }
+        .carousel-prev-icon,
+        .carousel-next-icon {
+            font-size: 40px;
+            color: $color_black;
+        }
+        .carousel-control-prev {
+            justify-content: start !important;
+        }
+        .carousel-control-next {
+            justify-content: end !important;
+        }
+        .carousel_bottom {
+            width: 100%;
+            position: absolute;
+            bottom: 0;
+            img {
+                width: 100%;
+            }
+        }
+    }
+}
+//responsive
+// @include responsive('extra-large-down') {
+//     .carousel {
+//         .container {
+//             .carousel_item {
+//                 right: -10% !important;
+//             }
+//         }
+//     }
+// }
+@include responsive('large-down') {
+    .carousel {
+        .container {
+            .carousel_img {
+                img {
+                    width: 80%;
+                }
+            }
+            .carousel_item {
+                // right: -16% !important;
+                h5 {
+                    font-size: $fs_title_2;
+                }
+            }
+        }
+    }
+}
+@include responsive('medium-down') {
+    .carousel {
+        .container {
+            .carousel_img {
+                img {
+                    width: 70%;
+                }
+            }
+            .carousel_item {
+                // right: -14% !important;
+                h5 {
+                    font-size: $fs_title_3;
+                }
+                p {
+                    font-size: $fs_text;
+                }
+                .styleButton1 {
+                    padding: 6px 14px;
+                }
+            }
+            .carousel-prev-icon,
+            .carousel-next-icon {
+                font-size: $fs_text_2;
+            }
+            .carousel-indicators [data-bs-target] {
+                height: 16px !important;
+                width: 16px !important;
+            }
+        }
+    }
+}
+@include responsive('small-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                // right: -14% !important;
+                h5 {
+                    font-size: $fs_title_3;
+                    max-width: 300px;
+                }
+                p {
+                    font-size: $fs_text_1_1;
+                    margin-bottom: 10px;
+                    text-overflow: ellipsis;
+                    max-width: 140px;
+                }
+                .styleButton1 {
+                    padding: 6px 14px;
+                }
+            }
+        }
+    }
+}
+@include responsive('extra-small-down') {
+    .carousel {
+        .container {
+            .carousel_item {
+                // right: -10% !important;
+                h5 {
+                    font-size: 12px;
+                }
+                p {
+                    font-size: 10px;
+                    margin-bottom: 10px;
+                }
+                .styleButton1 {
+                    padding: 3px 10px;
+                }
+            }
+            .carousel-prev-icon,
+            .carousel-next-icon {
+                font-size: $fs_text_2;
+            }
+            .carousel-indicators [data-bs-target] {
+                height: 12px !important;
+                width: 12px !important;
+            }
+        }
+    }
+}

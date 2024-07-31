@@ -1,0 +1,40 @@
+// Biến (variable)
+$color_green_100: #f8b653;
+$color_green_200: #e1b067;
+$color_grey: #dddddc;
+$color_grey_1: #fffcfc;
+$color_white: white;
+$color_white_200: #f8f8f8;
+$color_black: black;
+
+// Font-size
+$fs_text: 16px;
+$fs_text_1_1: 14px;
+$fs_text_1: 20px;
+$fs_text_2: 24px;
+$fs_text_3: 32px;
+$fs_title: 40px;
+$fs_title_1: 26px;
+$fs_title_2: 24px;
+$fs_title_3: 18px;
+
+// font-weight
+$fw_300: 300;
+$fw_400: 400;
+$fw_500: 500;
+$fw_bold: bold;
+
+// Responsive
+//break points
+$breakpoints: (
+    'extra-large': 1200px,
+    'large': 992px,
+    'medium': 768px,
+    'small': 576px,
+    'extra-small': 430px,
+    'extra-large-down': 1199.98px,
+    'large-down': 991.98px,
+    'medium-down': 767.98px,
+    'small-down': 575.98px,
+    'extra-small-down': 429.98px,
+);

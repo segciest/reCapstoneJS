@@ -1,0 +1,101 @@
+header {
+    nav {
+        img.header_logo {
+            height: 32px;
+            width: 116px;
+        }
+        .nav_item {
+            ul {
+                li {
+                    a {
+                        color: $color_white;
+                        i {
+                            color: white;
+                            &:hover {
+                                color: $color_green_100 !important;
+                            }
+                        }
+
+                        &.nav-link:hover {
+                            color: $color_green_100 !important;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.menu_header {
+    .container {
+        margin-top: 24px;
+        ul {
+            padding: 0;
+
+            li {
+                list-style: none;
+                display: inline-block;
+                margin: 0 27px;
+                border-bottom: solid 2px transparent;
+                // border-bottom: none;
+                transition: all 0.8s;
+
+                &.active {
+                    margin-left: 0;
+                    border-bottom: solid 2px $color_green_100;
+                    a {
+                        font-weight: $fw_400;
+                    }
+                }
+                a {
+                    text-decoration: none;
+                    color: $color_black;
+                    font-size: $fs_text_1;
+                    font-weight: $fw_300;
+                    transition: all 0.8s;
+                    &:hover {
+                        font-weight: $fw_400;
+                    }
+                }
+                &:hover {
+                    border-color: $color_green_100;
+                    font-weight: $fw_400;
+                }
+            }
+        }
+    }
+}
+//responsive
+// @include responsive('extra-large-down') {
+
+// }
+// @include responsive('large-down') {
+
+// }
+@include responsive('medium-down') {
+    .menu_header {
+        .container {
+            ul {
+                li {
+                    margin: 0 20px;
+                }
+            }
+        }
+    }
+}
+@include responsive('small-down') {
+    .menu_header {
+        .container {
+            ul {
+                li {
+                    margin: 0 10px;
+                    &.active {
+                        margin-left: 10px;
+                    }
+                    a {
+                        font-size: $fs_text_1_1;
+                    }
+                }
+            }
+        }
+    }
+}

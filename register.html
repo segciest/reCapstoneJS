@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Title</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
+
+    <!-- Flowbite -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+      crossorigin="anonymous"
+    />
+    <!-- FontAwesome 6.2.0 CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css"
+      integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./css/register.css" />
+    <!-- toastify -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+    <link rel="stylesheet" href="./css/register.css" />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.7.2/axios.min.js"
+      integrity="sha512-JSCFHhKDilTRRXe9ak/FJ28dcpOJxzQaCd3Xg8MyF6XFjODhy/YMCM8HW0TFDckNHWUewW+kfvhin43hKtJxAw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+
+  <body>
+    <header>
+      <!-- place navbar here -->
+      <nav class="bg-white w-full z-20 top-0 start-0 border-b border-gray-200">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+        >
+          <!-- Logo -->
+          <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="./img/logo.jpg" class="h-8 rounded" alt="Flowbite Logo" />
+            <span class="self-center text-2xl font-semibold whitespace-nowrap"
+              >Snkrs</span
+            >
+          </a>
+
+          <!-- Button started -->
+          <div
+            class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"
+          >
+            <button
+              data-collapse-toggle="navbar-sticky"
+              type="button"
+              class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+              aria-controls="navbar-sticky"
+              aria-expanded="false"
+            >
+              <span class="sr-only">Open main menu</span>
+              <svg
+                class="w-5 h-5"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 17 14"
+              >
+                <path
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M1 1h15M1 7h15M1 13h15"
+                />
+              </svg>
+            </button>
+          </div>
+          <div
+            class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
+            id="navbar-sticky"
+          >
+            <ul
+              class="flex flex-col p-4 md:p-0 font-medium rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-white"
+            >
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0"
+                  aria-current="page"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  >Men</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  >Women</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  >Kid</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:hover:text-blue-700 md:p-0"
+                  >Sport</a
+                >
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="text-white font-medium rounded-lg text-sm py-2 text-center btn items-center hover:scale-125"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
+                  <i class="fa-solid fa-magnifying-glass text-[#212529]"></i>
+                </button>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  class="text-white font-medium rounded-lg text-sm py-2 text-center btn items-center hover:scale-125"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal2"
+                >
+                  <i class="fa-solid fa-cart-arrow-down text-[#212529]"></i>
+                </button>
+              </li>
+              <li>
+                <div class="dropdown">
+                  <button
+                    class="btn btn-secondary text-white dropdown-toggle"
+                    type="button"
+                    data-bs-toggle="dropdown"
+                    aria-expanded="false"
+                  >
+                    Đăng nhập
+                  </button>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-item" href="/register.html">Sign in</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item" href="/register.html">Sign up</a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="body">
+        <!-- container  -->
+        <div class="containerLayout" id="container">
+          <!-- {/* Sign Up */} -->
+          <div class="formContainer signUp">
+            <form id="formSignUp">
+              <h2>Create Account</h2>
+              <div class="formIcon">
+                <a>
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span>or use your email for registeration</span>
+              <input type="text" placeholder="Name" id="name" />
+              <!-- thông báo name -->
+              <span class="noti" id="nameNoti"></span>
+
+              <input type="email" placeholder="Email" id="email" />
+              <!-- thông báo email -->
+              <span class="noti" id="emailNoti"></span>
+
+              <input type="password" placeholder="Password" id="password" />
+              <!-- thông báo password -->
+              <span class="noti" id="passwordNoti"></span>
+
+              <input type="text" placeholder="Phone" id="phone" />
+              <!-- thông báo phone -->
+              <span class="noti" id="phoneNoti"></span>
+
+              <div class="gender">
+                <ul>
+                  <li class="type">
+                    <input checked type="radio" value="true" name="selector" />
+                    <label for="male">Male</label>
+
+                    <div class="check"></div>
+                  </li>
+
+                  <li class="type">
+                    <input type="radio" value="false" name="selector" />
+                    <label for="female">Female</label>
+                    <div class="check"></div>
+                  </li>
+                </ul>
+              </div>
+              <button type="button" id="btnSubmit">Sign Up</button>
+            </form>
+          </div>
+
+          <!-- {/* Sign In */} -->
+          <div class="formContainer signIn">
+            <form id="formSignIn">
+              <h2>Sign In</h2>
+              <div class="formIcon">
+                <a>
+                  <i class="fa-brands fa-square-facebook"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-twitter"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-google-plus-g"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-linkedin"></i>
+                </a>
+                <a>
+                  <i class="fa-brands fa-github"></i>
+                </a>
+              </div>
+              <span>or use your email password</span>
+              <input type="email" placeholder="Email" id="email" />
+              <!-- thông báo email -->
+              <span class="noti" id="emailNotiSignIn"></span>
+
+              <input type="password" placeholder="Password" id="password" />
+              <!-- thông báo password -->
+              <span class="noti" id="passwordNotiSignIn"></span>
+
+              <button type="button" id="btnSubmitSignIn">Sign In</button>
+            </form>
+          </div>
+          <!-- {/* Container toggle */} -->
+          <div class="toggleContainer">
+            <!-- {/* toogle layout got 2 parts: left and right */} -->
+            <div class="toggle">
+              <!-- {/* toggle left */} -->
+              <div class="togglePannel toggleLeft">
+                <h1>Welcome Back!</h1>
+                <p class="font-thin">
+                  Enter your personal details to use all of site features
+                </p>
+                <button class="hiddenBtn" id="login">Sign In</button>
+              </div>
+
+              <!-- {/* toggle right */} -->
+              <div class="togglePannel toggleRight">
+                <h1>Hello!</h1>
+                <p class="font-thin">
+                  Register with your personal details to use all of site
+                  features
+                </p>
+                <button class="hiddenBtn" id="register">Sign Up</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <!-- place footer here -->
+      <section class="footer">
+        <div class="footer-container">
+          <div class="footer-item">
+            <h2 class="footer-title">GET HELP</h2>
+            <div class="footer-content">
+              <p class="footer-text">Contact us</p>
+              <p class="footer-text">Shopping</p>
+              <p class="footer-text">NIKEID</p>
+              <p class="footer-text">NIKE+</p>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-title">ORDERS</h2>
+            <div class="footer-content">
+              <p class="footer-text">Payment options</p>
+              <p class="footer-text">Shipping and delivery</p>
+              <p class="footer-text">Returns</p>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-title">REGISTER</h2>
+            <div class="footer-content">
+              <p class="footer-text">
+                Create one account to mânge everything you do with Nike, from
+                your shopping preferences to your Nike+ activity.
+              </p>
+              <a href="" class="footer-text">Learn more</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-title">EMAIL SIGN UP</h2>
+            <div class="footer-content">
+              <p class="footer-text">
+                Be the first to know about new products and special offers.
+              </p>
+              <a href="" class="footer-text">Sign up now</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-title">GIFT CARDS</h2>
+            <div class="footer-content">
+              <p class="footer-text">Give the gift that always fits.</p>
+              <a href="" class="footer-text">View cards</a>
+            </div>
+          </div>
+          <div class="footer-item">
+            <h2 class="footer-title">STORES NEAR YOU</h2>
+            <div class="footer-content">
+              <p class="footer-text">
+                Locate a Nike retail store or authorized retailer.
+              </p>
+              <a href="" class="footer-text">Search</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </footer>
+    <!-- Bootstrap JavaScript Libraries -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- toastify -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/toastify-js"
+    ></script>
+
+    <script type="module" src="./js/register.js"></script>
+  </body>
+</html>

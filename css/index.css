@@ -1,0 +1,143 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+.product {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+}
+.product .product-container {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  gap: 40px;
+}
+.product .product-container .productItem {
+  transition: all 0.3s;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+}
+.product .product-container .productItem:hover {
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  transform: scale(1.1);
+}
+.product .product-container .productItem .productName {
+  font-size: 22px;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.product .product-container .productItem .productMore {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  justify-content: space-between;
+}
+.product .product-container .productItem .productMore .buy {
+  text-align: center;
+}
+.product .product-container .productItem .productMore .buy .buyNowBtn {
+  width: 100%;
+}
+.product .product-container .productItem .productMore .buy .buyNowBtn a {
+  width: 100%;
+  text-decoration: none;
+  color: white;
+}
+.product .product-container .productItem .productMore .price {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.product .product-container .productItem .productMore .price p {
+  margin-bottom: unset;
+}
+
+.banner #carouselExampleFade .carousel-inner .carousel-item img {
+  width: 100%;
+  height: 620px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.footer {
+  margin-top: 50px;
+  border-top: 1px solid #fafafa;
+}
+.footer .footer-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  justify-content: center;
+  margin: 10px 30px 0px 30px;
+}
+.footer .footer-container .footer-item {
+  margin-bottom: 10px;
+}
+.footer .footer-container .footer-item .footer-title {
+  margin-bottom: 10px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.footer .footer-container .footer-item .footer-content p {
+  font-size: 16px;
+  margin-bottom: unset;
+}
+.footer .footer-container .footer-item .footer-content a {
+  text-decoration: none;
+  color: red;
+}
+
+/* Máy tính để bàn lớn (extra extra large devices) */
+/* Máy tính xách tay (extra large devices) */
+/* Máy tính bảng (large devices) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .product .product-container {
+    grid-template-columns: repeat(2, 300px);
+  }
+}
+/* Điện thoại di động vừa (medium devices) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  .product .product-container {
+    grid-template-columns: repeat(2, 250px);
+    gap: 20px;
+  }
+}
+/* Điện thoại di động nhỏ (small devices) */
+@media (max-width: 575.98px) {
+  .product .product-container {
+    grid-template-columns: repeat(1, 350px);
+  }
+  .banner #carouselExampleFade .carousel-inner .carousel-item img {
+    width: 100%;
+    height: 300px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+  }
+}
+/* styles.css */
+#backToTopBtn {
+  display: none; /* Hidden by default */
+  position: fixed; /* Fixed/sticky position */
+  bottom: 20px; /* Place the button at the bottom of the page */
+  right: 30px; /* Place the button 30px from the right */
+  z-index: 99; /* Make sure it does not overlap */
+  border: none; /* Remove borders */
+  outline: none; /* Remove outline */
+  background-color: #bb9ab1; /* Set a background color */
+  color: white; /* Text color */
+  cursor: pointer; /* Add a mouse pointer on hover */
+  padding: 15px; /* Some padding */
+  border-radius: 10px; /* Rounded corners */
+  font-size: 18px; /* Increase font size */
+}
+
+#backToTopBtn:hover {
+  background-color: #987d9a; /* Add a dark-grey background on hover */
+}/*# sourceMappingURL=index.css.map */
